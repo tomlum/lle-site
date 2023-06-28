@@ -1,0 +1,180 @@
+<div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" crossorigin="anonymous">
+	</script>
+
+
+	<style>
+		body{
+			background-color: black;
+		}
+		.body{
+			text-align:  justify;
+			width:  4291px;
+			font-size:  69px;
+			margin: 0px;
+			padding: 10px;
+			/*border: solid 1px red;*/
+			color:  white;
+		}
+		.end{
+			text-align: right;
+			margin:  0px;
+			padding: 0px;
+		}
+		.title{
+			color:  white;
+			display:  inline;
+			padding: 0px;
+		}
+		div{
+			/*background-color:  white;*/
+			padding:  20px;
+			text-align:  center;
+			font-family:  helvetica;
+		}
+		h1{
+			display: inline;
+		}
+		.c1{
+			color:  #fff689;
+		}
+		.c2{
+			color:  #d4cd62;
+		}
+		.c3{
+			color:  #e8e174;
+		}
+		.c4{
+			color:  #f6ef89;
+		}
+		.c5{
+			color:  #fef5a0;
+		}
+	</style>
+	<button onClick="(function(){
+		console.log(document.getElementById('target'))
+
+		domtoimage.toBlob(document.getElementById('target'))
+		.then(function (blob) {
+			window.saveAs(blob, 'my-node.png');
+		});
+	})();">
+	print
+</button>
+<div id="target" class="body">
+	<h1>
+		<b>I Learned About</b>
+	</h1>
+
+	<h1 class="c1">Temporal Illusions, </h1>
+	<h1 class="c2">Why Bees Are Electrically Charged, </h1>
+
+	<h1 class="c3">Shakespeare Conspiracies, </h1>
+	<h1 class="c4">Spooky Frogs, </h1>
+
+	<h1 class="c5">Which Animal Has the Most Bones, </h1>
+	<h1 class="c1">Witch Hunts, </h1>
+
+	<h1 class="c2">Mind-Controlling Parasites, </h1>
+	<h1 class="c3">Whether Elephants Are Right-Handed, </h1>
+
+	<h1 class="c4">Naruto AMVs, </h1>
+	<h1 class="c5">Randomness, </h1>
+	<h1 class="c1">What Happens Without Sleep, </h1>
+
+	<h1 class="c2">Stardew Valley, </h1>
+	<h1 class="c3">Pregnancy Tests, </h1>
+	<h1 class="c4">The Middlest Size of the Universe, </h1>
+
+	<h1 class="c5">Fanfiction, </h1>
+	<h1 class="c1">Genetic Chimeras, </h1>
+	<h1 class="c2">Judas Goats, </h1>
+	<h1 class="c3">Toys, </h1>
+
+	<h1 class="c4">Recorded Sound,</h1>
+	<h1 class="c5">Whether People With Prosopagnosia Experience Pareidolia, </h1>
+
+	<h1 class="c1">Meeting David Attenborough, </h1>
+	<h1 class="c2">Beaver Reintroductions, </h1>
+	<h1 class="c3">Solving Mazes, </h1>
+	<h1 class="c4">ASMR, </h1>
+	<h1 class="c5">Video Game Epidemiology, </h1>
+	<h1 class="c1">Why Sneezes Smell, </h1>
+	<h1 class="c2">Game Jams, </h1>
+
+	<h1 class="c3">Insect Consciousness, </h1>
+	<h1 class="c4">Theater Science, </h1>
+	<h1 class="c5">Thermal Biology, </h1>
+
+	<h1 class="c1">Why We Have Periods, </h1>
+	<h1 class="c2">Stickers, </h1>
+	<h1 class="c3">The Golden Toad, </h1>
+
+	<h1 class="c4">How Many Things We've Left on the Moon, </h1>
+	<h1 class="c5">The Oldest Bar Joke, </h1>
+
+	<h1 class="c1">Domesticating Foxes, </h1>
+	<h1 class="c2">The Oldest Potted Plant, </h1>
+	<h1 class="c3">Crosswords, </h1>
+
+	<h1 class="c4">The Turing Test, </h1>
+	<h1 class="c5">Bodily Quirks, </h1>
+	<h1 class="c1">Pub Quizzes, </h1>
+	<h1 class="c2">Saving the Honeybees, </h1>
+
+	<h1 class="c3">Semantic Satiation, </h1>
+	<h1 class="c4">Speedrunning, </h1>
+	<h1 class="c5">Machine Learning, </h1>
+
+	<h1 class="c1">Whether Butterflies Remember Being Caterpillars, </h1>
+
+	<h1 class="c2">Love Island, </h1>
+	<h1 class="c3">Cosmic Rays, </h1>
+	<h1 class="c4">Eye Colors, </h1>
+	<h1 class="c5">The Triangle, </h1>
+
+	<h1 class="c1">Carbon Dating, </h1>
+	<h1 class="c2">Space Babies, </h1>
+	<h1 class="c3">Nail Polish, </h1>
+	<h1 class="c4">The Science of Gay, </h1>
+
+	<h1 class="c5">How Many Songs Fit Into DNA, </h1>
+	<h1 class="c1">Niche Sports, </h1>
+
+	<h1 class="c2">The Math of Conspiracies, </h1>
+	<h1 class="c3">Why Pluto Isn't a Planet, </h1>
+
+	<h1 class="c4">Whether Animals Can Make Art, </h1>
+	<h1 class="c5">Animals on Recreational Drugs, </h1>
+
+	<h1 class="c1">How Many Digits of Pi We Actually Need, </h1>
+	<h1 class="c2">Vantablack Drama, </h1>
+
+	<h1 class="c3">How we Figured Out the Age of the Earth, </h1>
+	<h1 class="c4">What Defines a Dinosaur, </h1>
+	<h1 class="c5">Magnetoreception, </h1>
+	<h1 class="c1">The Real Trolley Problem, </h1>
+	<h1 class="c2">Hitchbot, </h1>
+	<h1 class="c3">Plastic, </h1>
+
+	<h1 class="c4">Imperfect Pitch, </h1>
+	<h1 class="c5">Generation Naming, </h1>
+	<h1 class="c1">Self-Experimentation, </h1>
+
+	<h1 class="c2">Amputation Archaeology, </h1>
+	<h1 class="c3">and The Beauty of PowerPoint </h1>
+
+	<h1 class="c4">from the podcast <i><u class="c5">Let's Learn Everything!</u></i></h1>
+	<br/>
+	<div class="end">
+		<h1>And all I got was this poster.</h1>
+		<br/>
+		<h1>And I had to pay for it.</h1>
+		<br/>
+		<h1>But the show is good.</h1>
+	</div>
+</div>
+</div>
