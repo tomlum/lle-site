@@ -94,6 +94,7 @@
       transition: all 1ms;
       cursor:  pointer;
       text-decoration:  none;
+      user-select: text;
       height: 50px;
       width: 48%;
       font-size: 13px;
@@ -176,13 +177,23 @@
 
     }
 
-    .imagee{
+    .revealabelImage{
       max-width: 100%;
-    max-height: 100%;
-    margin-bottom: 20px;
-    display: none;
+      max-height: 100%;
+      margin-bottom: 20px;
+      display: none;
     }
   </style>
+  <script>
+    function toggleImage(el) {
+      imgDisplay = document.querySelector(`#${el.id} ~ img`).style.display
+      if(imgDisplay == "inline"){
+        document.querySelector(`#${el.id} ~ img`).style.display = "none"
+      } else{
+        document.querySelector(`#${el.id} ~ img`).style.display = "inline"
+      }
+    }
+  </script>
 </head>
 <header></header>
 
@@ -209,69 +220,48 @@
 
 
     <span class="button-container">
-
-<button onclick="(function(){getElementById('img1').style.display='inline'})()" class="button" id="button1" style="margin-top: 15px; height: 65px; width:100%"><h2 style="padding-top: 6px;">Przewalski’s horse (yes that’s how it’s spelled)
-
-</h2></button>
-<img class="imagee" id="img1" src="https://www.letslearneverything.com/112/horse.jpg"/>
-<button onclick="(function(){getElementById('img2').style.display='inline'})()" class="button" id="button2" style="margin-top: 15px; height: 65px; width:100%"><h2 style="padding-top: 6px;">Frogs
-
-</h2></button>
-<img class="imagee" id="img2" src="https://www.letslearneverything.com/112/frogs.png"/>
-<button onclick="(function(){getElementById('img3').style.display='inline'})()" class="button" id="button3" style="margin-top: 15px; height: 65px; width:100%"><h2 style="padding-top: 6px;">Character U+FDFD
-
-</h2></button>
-<img class="imagee" id="img3" src="https://www.letslearneverything.com/112/bismillah.png"/>
-<button onclick="(function(){getElementById('img4').style.display='inline'})()" class="button" id="button4" style="margin-top: 15px; height: 65px; width:100%"><h2 style="padding-top: 6px;">Arabic Text
-
-</h2></button>
-<img class="imagee" id="img4" src="https://www.letslearneverything.com/112/arabic.jpeg"/>
-<button onclick="(function(){getElementById('img5').style.display='inline'})()" class="button" id="button5" style="margin-top: 15px; height: 65px; width:100%"><h2 style="padding-top: 6px;">Decorative U+FDFD's
-
-</h2></button>
-<img class="imagee" id="img5" src="https://www.letslearneverything.com/112/bismillah-variants.jpg"/>
-<button onclick="(function(){getElementById('img6').style.display='inline'})()" class="button" id="button6" style="margin-top: 15px; height: 65px; width:100%"><h2 style="padding-top: 6px;">Tom's Favorite Use of Kashida
-
-</h2></button>
-<img class="imagee" id="img6" src="https://www.letslearneverything.com/112/bismillah-map.png"/>
+      <button onclick="toggleImage(this)" class="button" id="button1" style="margin-top: 15px; height: 65px; width:100%">
+        <h2 style="padding-top: 6px;">
+          Przewalski’s horse (yes that’s how it’s spelled)
+        </h2>
+      </button>
+      <img class="revealabelImage" src="https://www.letslearneverything.com/112/horse.jpg"/>
+      <button onclick="toggleImage(this)" class="button" id="button2" style="margin-top: 15px; height: 65px; width:100%">
+        <h2 style="padding-top: 6px;">
+          Frogs
+        </h2>
+      </button>
+      <img class="revealabelImage" src="https://www.letslearneverything.com/112/frogs.png"/>
+      <button onclick="toggleImage(this)" class="button" id="button3" style="margin-top: 15px; height: 65px; width:100%">
+        <h2 style="padding-top: 6px;">
+          Character U+FDFD
+        </h2>
+      </button>
+      <img class="revealabelImage" src="https://www.letslearneverything.com/112/bismillah.png"/>
+      <button onclick="toggleImage(this)" class="button" id="button4" style="margin-top: 15px; height: 65px; width:100%">
+        <h2 style="padding-top: 6px;">
+          Arabic Text
+        </h2>
+      </button>
+      <img class="revealabelImage" src="https://www.letslearneverything.com/112/arabic.jpeg"/>
+      <button onclick="toggleImage(this)" class="button" id="button5" style="margin-top: 15px; height: 65px; width:100%">
+        <h2 style="padding-top: 6px;">
+          Decorative U+FDFD's
+        </h2>
+      </button>
+      <img class="revealabelImage" src="https://www.letslearneverything.com/112/bismillah-variants.jpg"/>
+      <button onclick="toggleImage(this)" class="button" id="button6" style="margin-top: 15px; height: 65px; width:100%">
+        <h2 style="padding-top: 6px;">
+          Tom's Favorite Use of Kashida
+        </h2>
+      </button>
+      <img class="revealabelImage" src="https://www.letslearneverything.com/112/bismillah-map.png"/>
 
       
     </span>
+  </div>
 
 </body>
 <footer>
-  <script>
-
-    if()
-    function shuffle(array) {
-      let currentIndex = array.length,  randomIndex;
-
-      // While there remain elements to shuffle...
-      while (currentIndex != 0) {
-
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-      }
-
-      return array;
-    }
-
-    var arr = shuffle([0,1,2]);
-    var wrapper = document.getElementById("wrapper");
-    var items = wrapper.children;
-    var elements = document.createDocumentFragment();
-
-    arr.forEach(function(idx) {
-      elements.appendChild(items[idx].cloneNode(true));
-    });
-
-    wrapper.innerHTML = null;
-    wrapper.appendChild(elements);
-  </script>
 </footer>
 </html>
